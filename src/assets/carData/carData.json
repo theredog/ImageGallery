@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Porsche 911 GT3 RS",
+        "details": "The Porsche 911 GT3 RS is a high-performance sports car that represents the pinnacle of track-focused engineering. Powered by a naturally aspirated 4.0-liter flat-six engine producing 518 horsepower, it can accelerate from 0-60 mph in just 3.0 seconds. With advanced aerodynamics, including a massive rear wing.",
+        "price": 223800
+      },
+    {
+      "id": 2,
+      "name": "Ford Mustang GT",
+      "details": "The Ford Mustang GT is an iconic American sports car powered by a robust 5.0L V8 engine producing 460 horsepower. It comes with a smooth 6-speed manual transmission, offering an exhilarating driving experience. The Mustang GT perfectly balances classic muscle car heritage with modern performance.",
+      "price": 36285
+    },
+    {
+      "id": 3,
+      "name": "Toyota Camry",
+      "details": "The Toyota Camry is a reliable midsize sedan equipped with a fuel-efficient 2.5L 4-cylinder engine. It offers impressive fuel economy ratings of 28 mpg in the city and 39 mpg on the highway. The Camry comes standard with Toyota Safety Sense 2.5+, a suite of advanced safety features for peace of mind.",
+      "price": 25295
+    },
+    {
+      "id": 4,
+      "name": "Volkswagen Golf Mk4",
+      "details": "The Golf Mk4 is a compact hatchback known for its blend of practicality and performance. It comes equipped with a range of engines, including the reliable 2.0L four-cylinder, and offers a comfortable and engaging driving experience. The Mk4 features a well-crafted interior with high-quality materials and ample cargo space.",
+      "price": 29725
+    },
+    {
+      "id": 5,
+      "name": "BMW M3",
+      "details": "The BMW M3 is a high-performance luxury sports sedan featuring a powerful 3.0L Twin-Turbo Inline-6 engine that produces 473 horsepower. It can accelerate from 0-60 mph in just 3.8 seconds, delivering exhilarating performance. The M3 combines luxury, cutting-edge technology, and track-ready capabilities.",
+      "price": 70100
+    },
+    {
+      "id": 6,
+      "name": "Honda CR-V",
+      "details": "The Honda CR-V is a popular compact SUV equipped with a 1.5L Turbocharged 4-cylinder engine. It offers excellent fuel efficiency with 28 mpg in the city and 34 mpg on the highway. The CR-V provides ample cargo space of 39.2 cubic feet, making it practical for both daily commutes and weekend getaways.",
+      "price": 26400
+    }
+  ]

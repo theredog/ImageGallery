@@ -1,7 +1,10 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
+  globalStyle:'./src/global/global.css',
+  globalScript:'./src/global/global.ts',
   namespace: 'image-picker',
+  buildDist:true,
   outputTargets: [
     {
       type: 'dist',
@@ -18,6 +21,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // disable service workers
+      copy: [{src:'_redirects'}],
     },
   ],
   testing: {

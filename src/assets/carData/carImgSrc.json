@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "images": {
+      "left": "/assets/porsche911gt3rs/left.png",
+      "right": "/assets/porsche911gt3rs/right.jpeg",
+      "studio": "/assets/porsche911gt3rs/studio.png"
+    },
+    "name": "Porsche 911 GT3 RS"
+
+  },
+  {
+    "id": 2,
+    "images": {
+      "left": "/assets/FordMustangGT/back.jpg",
+      "right": "/assets/FordMustangGT/right.jpg",
+      "studio": "/assets/FordMustangGT/studio.jpg"
+    },
+    "name": "Ford Mustang GT"
+
+  },
+  {
+    "id": 3,
+    "images": {
+      "left": "/assets/toyotaCamry/left.jpg",
+      "right": "/assets/toyotaCamry/right.jpg",
+      "studio": "/assets/toyotaCamry/studio.jpg"
+    },
+    "name": "Toyota Camry"
+
+  },
+  {
+    "id": 4,
+    "images": {
+      "left": "/assets/golfmk4/left.jpg",
+      "right": "/assets/golfmk4/right.jpg",
+      "studio": "/assets/golfmk4/studio.jpg"
+    },
+    "name": "Volkswagen Golf Mk4"
+
+  },
+  {
+    "id": 5,
+    "images": {
+      "left": "/assets/bmwm3/left.jpg",
+      "right": "/assets/bmwm3/right.jpg",
+      "studio": "/assets/bmwm3/studio.jpg"
+    },
+    "name": "BMW M3"
+
+  },
+  {
+    "id": 6,
+    "images": {
+      "left": "/assets/hondacrv/left.jpg",
+      "right": "/assets/hondacrv/right.jpg",
+      "studio": "/assets/hondacrv/studio.jpg"
+    },
+    "name": "Honda CR-V"
+
+  }
+]
