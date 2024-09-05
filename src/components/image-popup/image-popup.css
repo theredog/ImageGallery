@@ -1,0 +1,211 @@
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(89, 94, 92, 0.96);
+  z-index: 50;
+}
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  border-radius: 4rem;
+  box-shadow: 10px 10px 10px rgba(103, 8, 8, 0.24);
+}
+
+.img-part {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4rem;
+}
+
+.img-part > img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*object-fit: cover;*/
+  will-change: transform;
+  border-radius: 4rem 0 0 4rem;
+}
+
+.text-part {
+  font-family: "Open Sans";
+  position: relative;
+  background-color: white;
+  color: black;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 4rem 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  text-align: justify;
+}
+
+header {
+  font-size: 1.5em;
+  color: #0a1014;
+  text-shadow: -2px 2px 5px #516969;
+  padding: 0 1rem;
+}
+
+main {
+  height: 100%;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-size: 2rem;
+  padding: 0 1rem;
+  width: 95%;
+}
+
+footer h5 {
+  text-shadow: 2px 2px 5px #516969;
+}
+
+footer button {
+  padding: 1rem;
+  background-color: #970000;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 2rem;
+  transition: all 0.5s ease;
+  box-shadow: 2px 2px 5px #516969;
+}
+
+footer button:hover {
+  transform: scale(1.2);
+  cursor:pointer;
+}
+
+.exit-btn {
+  padding: 1rem;
+  background-color: white;
+  border: none;
+  outline: none;
+  cursor:pointer;
+  position: absolute;
+  top: 5%;
+  left: 2.5%;
+  z-index: 50000000;
+  font-weight: bolder;
+  font-size: 2rem;
+  border-radius: 100rem;
+  transition: all 0.5s ease;
+}
+
+.exit-btn:hover {
+  transform: scale(1.1);
+}
+
+.controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+}
+
+#left, #right, #bottom, #top {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  z-index: 100000;
+}
+
+#left, #right {
+  bottom: 0;
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  left: 3rem; /* Reduced from 6rem to 3rem */
+}
+
+#bottom {
+  bottom: -1.5rem; /* Raised from -2.5rem to -1.5rem */
+  left: 1.5rem; /* Moved left from 3rem to 1.5rem */
+}
+
+#top {
+  bottom: 1.5rem; /* Lowered from 2.5rem to 1.5rem */
+  left: 1.5rem; /* Moved left from 3rem to 1.5rem */
+}
+
+#left img, #right img, #bottom img, #top img {
+  transition: all 0.5s ease;
+  width: 3rem;
+  height: 2.5rem;
+}
+
+#left img:hover, #right img:hover, #bottom img:hover, #top img:hover {
+  cursor: pointer;
+  outline: none;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .modal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    top: 15%;
+  }
+
+  .img-part > img {
+    border-radius: 4rem 4rem 0 0;
+  }
+
+  .text-part {
+    border-radius: 0 0 4rem 4rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .text-part {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .text-part main p {
+    font-size: 1rem;
+  }
+  .text-part footer h5,
+  .text-part footer button{
+    font-size: 1rem;
+  }
+
+  .text-part footer {
+    width: 90%;
+  }
+
+  .exit-btn {
+    font-size: 1rem;
+    left: 10%;
+  }
+}

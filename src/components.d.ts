@@ -6,56 +6,98 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface CompContainer {
+    }
+    interface ImageEl {
+        "elementId": string;
+        "imgAlt": string;
+        "imgSrc": string;
+    }
+    interface ImagePopup {
+        "moduleDataObj": {id:number,name:string,details:string,price:number,image:string};
     }
 }
+export interface ImageElCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLImageElElement;
+}
+export interface ImagePopupCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLImagePopupElement;
+}
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLCompContainerElement extends Components.CompContainer, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLCompContainerElement: {
+        prototype: HTMLCompContainerElement;
+        new (): HTMLCompContainerElement;
+    };
+    interface HTMLImageElElementEventMap {
+        "passToModule": {id:number,name:string,details:string,price:number,image:string};
+    }
+    interface HTMLImageElElement extends Components.ImageEl, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLImageElElementEventMap>(type: K, listener: (this: HTMLImageElElement, ev: ImageElCustomEvent<HTMLImageElElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLImageElElementEventMap>(type: K, listener: (this: HTMLImageElElement, ev: ImageElCustomEvent<HTMLImageElElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLImageElElement: {
+        prototype: HTMLImageElElement;
+        new (): HTMLImageElElement;
+    };
+    interface HTMLImagePopupElementEventMap {
+        "triggerFunction": any;
+    }
+    interface HTMLImagePopupElement extends Components.ImagePopup, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLImagePopupElementEventMap>(type: K, listener: (this: HTMLImagePopupElement, ev: ImagePopupCustomEvent<HTMLImagePopupElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLImagePopupElementEventMap>(type: K, listener: (this: HTMLImagePopupElement, ev: ImagePopupCustomEvent<HTMLImagePopupElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLImagePopupElement: {
+        prototype: HTMLImagePopupElement;
+        new (): HTMLImagePopupElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "comp-container": HTMLCompContainerElement;
+        "image-el": HTMLImageElElement;
+        "image-popup": HTMLImagePopupElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface CompContainer {
+    }
+    interface ImageEl {
+        "elementId"?: string;
+        "imgAlt"?: string;
+        "imgSrc"?: string;
+        "onPassToModule"?: (event: ImageElCustomEvent<{id:number,name:string,details:string,price:number,image:string}>) => void;
+    }
+    interface ImagePopup {
+        "moduleDataObj"?: {id:number,name:string,details:string,price:number,image:string};
+        "onTriggerFunction"?: (event: ImagePopupCustomEvent<any>) => void;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "comp-container": CompContainer;
+        "image-el": ImageEl;
+        "image-popup": ImagePopup;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "comp-container": LocalJSX.CompContainer & JSXBase.HTMLAttributes<HTMLCompContainerElement>;
+            "image-el": LocalJSX.ImageEl & JSXBase.HTMLAttributes<HTMLImageElElement>;
+            "image-popup": LocalJSX.ImagePopup & JSXBase.HTMLAttributes<HTMLImagePopupElement>;
         }
     }
 }
